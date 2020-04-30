@@ -1,10 +1,15 @@
 package com.game;
 
+import java.awt.*;
+
 public class Main {
 
     public static void main(String[] args){
-
-        System.out.println("test");
-
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                MyJFrame window = new MyJFrame();
+            }
+        });
     }
 }
