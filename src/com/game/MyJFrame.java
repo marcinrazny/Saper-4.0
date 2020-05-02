@@ -9,7 +9,7 @@ public class MyJFrame extends JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         setSize(500, 500);
-        setTitle("Saper");
+        setTitle("SAPER 4.0");
         add(new MyJPanelPoleGry());
         pack();
     }
