@@ -11,19 +11,20 @@ import java.awt.event.MouseListener;
 public class MyJPanelPoleGry extends JPanel {
 
     ImageIcon IconField = new ImageIcon(this.getClass().getResource("images/poleObraz12.png"));
+    ImageIcon IconMine = new ImageIcon(this.getClass().getResource("images/mina.jpg"));
+    ImageIcon IconFieldChor = new ImageIcon(this.getClass().getResource("images/poleObraz14Flaga.png"));
+    ImageIcon IconFieldZnak = new ImageIcon(this.getClass().getResource("images/poleObraz14znak.png"));
+    ImageIcon IconMineBlow = new ImageIcon(this.getClass().getResource("images/minaBum.jpg"));
+    ImageIcon IconNoMine = new ImageIcon(this.getClass().getResource("images/noMine.jpg"));
+
     int fieldSize = 10;
 
     JButton[][] buttonField = new JButton[fieldSize][fieldSize];
     JLabel[][] cells = new JLabel[fieldSize][fieldSize];
 
-    double iloscMin = fieldSize * 1.7;
+    double mineQuantity = fieldSize * 1.7;
 
-
-    MyJPanelPoleGry() {
-
-        setLayout(null);
-        setPreferredSize(new Dimension(300, 300));
-        Border border = LineBorder.createGrayLineBorder();
+    void FillField(){
 
         for (int i = 0; i < fieldSize; i++) {
 
@@ -47,6 +48,32 @@ public class MyJPanelPoleGry extends JPanel {
                 add(cells[i][j]);
             }
         }
+    }
+    void SetMines(){
+
+        for (int i = 1; i <= mineQuantity; i++) {
+            int x = ((int) (Math.random() * 9 + 0));
+            int y = ((int) (Math.random() * 9 + 0));
+            cells[x][y].setIcon(IconMine);
+            cells[x][y].setName("Mine");
+        }
+    }
+
+
+
+    MyJPanelPoleGry() {
+
+        setLayout(null);
+        setPreferredSize(new Dimension(300, 300));
+        Border border = LineBorder.createGrayLineBorder();
+
+        FillField();
+
+        SetMines();
+
+
+
+
 
     }
 }
