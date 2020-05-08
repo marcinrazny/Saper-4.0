@@ -52,10 +52,17 @@ public class MyJPanelPoleGry extends JPanel {
     void SetMines(){
 
         for (int i = 1; i <= mineQuantity; i++) {
-            int x = ((int) (Math.random() * 9 + 0));
-            int y = ((int) (Math.random() * 9 + 0));
-            cells[x][y].setIcon(IconMine);
-            cells[x][y].setName("Mine");
+            int x = ((int) (Math.random() * mineQuantity + 0));
+            int y = ((int) (Math.random() * mineQuantity + 0));
+
+            if (cells[x][y].getName().equals("Mine")) {
+
+                i--;
+
+            } else {
+                cells[x][y].setIcon(IconMine);
+                cells[x][y].setName("Mine");
+            }
         }
     }
 
@@ -65,15 +72,10 @@ public class MyJPanelPoleGry extends JPanel {
 
         setLayout(null);
         setPreferredSize(new Dimension(300, 300));
-        Border border = LineBorder.createGrayLineBorder();
 
         FillField();
 
         SetMines();
-
-
-
-
 
     }
 }
