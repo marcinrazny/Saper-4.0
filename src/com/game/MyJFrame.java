@@ -8,9 +8,8 @@ public class MyJFrame extends JFrame {
         setVisible(true);
         setLocationRelativeTo(null);
         setResizable(false);
-        setSize(500, 500);
-        setTitle("SAPER 4.0");
-        add(new MyJPanelPoleGry());
+        setTitle("Saper");
+        add(new MyJPanelStart());
         pack();
     }
 }
