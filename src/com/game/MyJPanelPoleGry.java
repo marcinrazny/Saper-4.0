@@ -36,7 +36,7 @@ public class MyJPanelPoleGry extends JPanel {
                 buttonField[i][j].setIcon(IconField);
                 add(buttonField[i][j]);
                 buttonField[i][j].setFocusable(false);
-                buttonField[i][j].setVisible(false);
+                buttonField[i][j].setVisible(true);
                 buttonField[i][j].setBorder((BorderFactory.createBevelBorder(0)));
 
                 cells[i][j] = new JLabel("");
@@ -59,74 +59,77 @@ public class MyJPanelPoleGry extends JPanel {
 
                 if (cells[j][i].getIcon() != null) {
 
-                    if ((cells[j][i].getIcon() == null)){
+                    if ((cells[j][i].getIcon() == null)) {
                         if (cells[j][i].getText().equals("")) cells[j][i].setText(String.valueOf(0));
                         cells[j][i].setText(String.valueOf(Integer.parseInt(cells[j][i].getText()) + 1));
                     }
-                    if (i>0) {
+                    if (i > 0) {
                         if ((cells[j][i - 1].getIcon() == null)) {
                             if (cells[j][i - 1].getText().equals("")) cells[j][i - 1].setText(String.valueOf(0));
                             cells[j][i - 1].setText(String.valueOf(Integer.parseInt(cells[j][i - 1].getText()) + 1));
                         }
                     }
-                    if (i<fieldSize-1) {
+                    if (i < fieldSize - 1) {
                         if ((cells[j][i + 1].getIcon() == null)) {
                             if (cells[j][i + 1].getText().equals("")) cells[j][i + 1].setText(String.valueOf(0));
                             cells[j][i + 1].setText(String.valueOf(Integer.parseInt(cells[j][i + 1].getText()) + 1));
                         }
                     }
-                    if (j>0) {
+                    if (j > 0) {
                         if ((cells[j - 1][i].getIcon() == null)) {
                             if (cells[j - 1][i].getText().equals("")) cells[j - 1][i].setText(String.valueOf(0));
                             cells[j - 1][i].setText(String.valueOf(Integer.parseInt(cells[j - 1][i].getText()) + 1));
                         }
                     }
-                    if(j<fieldSize-1) {
+                    if (j < fieldSize - 1) {
                         if ((cells[j + 1][i].getIcon() == null)) {
                             if (cells[j + 1][i].getText().equals(""))
                                 cells[j + 1][i].setText(String.valueOf(0));
                             cells[j + 1][i].setText(String.valueOf(Integer.parseInt(cells[j + 1][i].getText()) + 1));
                         }
                     }
-                    if((j>0) && (i<fieldSize-1)) {
+                    if ((j > 0) && (i < fieldSize - 1)) {
                         if ((cells[j - 1][i + 1].getIcon() == null)) {
                             if (cells[j - 1][i + 1].getText().equals(""))
                                 cells[j - 1][i + 1].setText(String.valueOf(0));
                             cells[j - 1][i + 1].setText(String.valueOf(Integer.parseInt(cells[j - 1][i + 1].getText()) + 1));
                         }
                     }
-                    if ((j<fieldSize-1) &&(i>0)) {
+                    if ((j < fieldSize - 1) && (i > 0)) {
                         if ((cells[j + 1][i - 1].getIcon() == null)) {
                             if (cells[j + 1][i - 1].getText().equals(""))
                                 cells[j + 1][i - 1].setText(String.valueOf(0));
                             cells[j + 1][i - 1].setText(String.valueOf(Integer.parseInt(cells[j + 1][i - 1].getText()) + 1));
                         }
                     }
-                    if((j>0) && (i>0)) {
+                    if ((j > 0) && (i > 0)) {
                         if ((cells[j - 1][i - 1].getIcon() == null)) {
                             if (cells[j - 1][i - 1].getText().equals(""))
                                 cells[j - 1][i - 1].setText(String.valueOf(0));
                             cells[j - 1][i - 1].setText(String.valueOf(Integer.parseInt(cells[j - 1][i - 1].getText()) + 1));
                         }
                     }
-                    if ((i<fieldSize-1) && (j<fieldSize-1)) {
-                        if ((cells[j+1][i+1].getIcon() == null)) {
-                            if (cells[j+1][i+1].getText().equals("")) cells[j+1][i+1].setText(String.valueOf(0));
-                            cells[j+1][i+1].setText(String.valueOf(Integer.parseInt(cells[j+1][i+1].getText()) + 1));
+                    if ((i < fieldSize - 1) && (j < fieldSize - 1)) {
+                        if ((cells[j + 1][i + 1].getIcon() == null)) {
+                            if (cells[j + 1][i + 1].getText().equals(""))
+                                cells[j + 1][i + 1].setText(String.valueOf(0));
+                            cells[j + 1][i + 1].setText(String.valueOf(Integer.parseInt(cells[j + 1][i + 1].getText()) + 1));
                         }
                     }
+
                 }
             }
         }
     }
 
 
-    void SetMines(){
+
+    void SetMines() {
 
         for (int i = 1; i <= mineQuantity; i++) {
 
-            int x = ((int) (Math.random() * (mineQuantity) + 0));
-            int y = ((int) (Math.random() * (mineQuantity) + 0));
+            int x = ((int) (Math.random() * fieldSize + 0));
+            int y = ((int) (Math.random() * fieldSize + 0));
 
             if (cells[x][y].getName().equals("Mine")) {
 
@@ -139,6 +142,44 @@ public class MyJPanelPoleGry extends JPanel {
         }
     }
 
+    void MinesQuantityColor() {
+
+        int a = 0;
+
+        for (int j = 0; j < fieldSize; j++) {
+
+            for (int i = 0; i < fieldSize; i++) {
+
+                if (cells[i][j].getText().equals("3")) {
+                    a = 90;
+                }
+
+                if (cells[i][j].getText().equals("4")) {
+                    a = 160;
+                }
+
+                if (cells[i][j].getText().equals("5")) {
+                    a = 220;
+                }
+
+                if (cells[i][j].getText().equals("6")) {
+                    a = 220;
+                }
+
+                if (cells[i][j].getText().equals("7")) {
+                    a = 220;
+                }
+
+                cells[i][j].setForeground(new Color(220 - a, 0, 0));
+
+                if (cells[i][j].getText().equals("1")) {
+
+                    cells[i][j].setForeground(new Color(5, 12, 192));
+
+                }
+            }
+        }
+    }
 
 
     MyJPanelPoleGry() {
