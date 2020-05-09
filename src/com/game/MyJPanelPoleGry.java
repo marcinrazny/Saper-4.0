@@ -10,7 +10,6 @@ import java.awt.event.MouseListener;
 
 public class MyJPanelPoleGry extends JPanel {
 
-
     ImageIcon IconField = new ImageIcon(this.getClass().getResource("images/poleObraz12.png"));
     ImageIcon IconMine = new ImageIcon(this.getClass().getResource("images/mina.jpg"));
     ImageIcon IconFieldChor = new ImageIcon(this.getClass().getResource("images/poleObraz14Flaga.png"));
@@ -143,45 +142,7 @@ public class MyJPanelPoleGry extends JPanel {
         }
     }
 
-    void MinesQuantityColor() {
-
-        int a = 0;
-
-        for (int j = 0; j < fieldSize; j++) {
-
-            for (int i = 0; i < fieldSize; i++) {
-
-                if (cells[i][j].getText().equals("3")) {
-                    a = 90;
-                }
-
-                if (cells[i][j].getText().equals("4")) {
-                    a = 160;
-                }
-
-                if (cells[i][j].getText().equals("5")) {
-                    a = 220;
-                }
-
-                if (cells[i][j].getText().equals("6")) {
-                    a = 220;
-                }
-
-                if (cells[i][j].getText().equals("7")) {
-                    a = 220;
-                }
-
-                cells[i][j].setForeground(new Color(220 - a, 0, 0));
-
-                if (cells[i][j].getText().equals("1")) {
-
-                    cells[i][j].setForeground(new Color(5, 12, 192));
-
-                }
-            }
-        }
-    }
-
+    
 
     MyJPanelPoleGry() {
 
