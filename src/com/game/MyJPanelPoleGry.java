@@ -10,6 +10,7 @@ import java.awt.event.MouseListener;
 
 public class MyJPanelPoleGry extends JPanel {
 
+
     ImageIcon IconField = new ImageIcon(this.getClass().getResource("images/poleObraz12.png"));
     ImageIcon IconMine = new ImageIcon(this.getClass().getResource("images/mina.jpg"));
     ImageIcon IconFieldChor = new ImageIcon(this.getClass().getResource("images/poleObraz14Flaga.png"));

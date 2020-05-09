@@ -8,10 +8,23 @@ import java.awt.event.ActionListener;
 public class MyJPanelStart extends JPanel {
     class Start implements ActionListener {
         @Override
-        public void actionPerformed(ActionEvent e) {
-
+        public void actionPerformed(ActionEvent ae) {
+            dispose();
+            JFrame frame2 = new JFrame();
+            frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame2.setVisible(true);
+            frame2.setLocationRelativeTo(null);
+            frame2.setResizable(false);
+            frame2.setTitle("Saper");
+            frame2.add(new MyJPanelPoleGry());
+            frame2.pack();
         }
     }
+
+    private static void dispose() {
+    }
+
+
     class MojaPomoc implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent ae){
