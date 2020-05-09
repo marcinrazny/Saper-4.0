@@ -9,7 +9,8 @@ public class MyJPanelStart extends JPanel {
     class Start implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent ae) {
-            dispose();
+            Window activeWindow = javax.swing.FocusManager.getCurrentManager().getActiveWindow();
+            activeWindow.dispose();
             JFrame frame2 = new JFrame();
             frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame2.setVisible(true);
