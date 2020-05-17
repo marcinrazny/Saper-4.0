@@ -6,9 +6,7 @@ Nowa wersja gry Saper.
 
 Praca zaliczeniowa kursu java w Connetis. 
 
-Mentor java:
-
-Piotr Wrona
+Mentor java: Piotr Wrona
 
 Aplikacja napisana w javie, przy użyciu InteliJ.
 
@@ -34,6 +32,6 @@ Funkcjonalności:
 
 3.Autorzy
 
-Marcin Raźny
+- Marcin Raźny
 
-Radek Borowski
+- Radek Borowski
