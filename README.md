@@ -11,6 +11,8 @@ Funkcjonalności:
 
 #Okno gry:
 
+![3](https://user-images.githubusercontent.com/60845511/82160826-43e8c280-9898-11ea-8719-6baf777029f2.png)
+
 1.Menu:
 - nowa gra
 - koniec gry
