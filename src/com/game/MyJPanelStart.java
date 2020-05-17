@@ -10,15 +10,8 @@ public class MyJPanelStart extends JPanel {
         @Override
         public void actionPerformed(ActionEvent ae) {
             Window activeWindow = javax.swing.FocusManager.getCurrentManager().getActiveWindow();
-            activeWindow.dispose();
-            JFrame frame2 = new JFrame();
-            frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame2.setVisible(true);
-            frame2.setLocationRelativeTo(null);
-            frame2.setResizable(false);
-            frame2.setTitle("Saper");
-            frame2.add(new MyJPanelPoleGry());
-            frame2.pack();
+//            activeWindow.dispose();
+            MyJFramePoleGry.new_game2(15,10,1);
         }
     }
     class Opcje implements ActionListener {
@@ -28,12 +21,13 @@ public class MyJPanelStart extends JPanel {
             activeWindow.dispose();
             JFrame frame2 = new JFrame();
             frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame2.setVisible(true);
-            frame2.setLocationRelativeTo(null);
-            frame2.setResizable(false);
             frame2.setTitle("Saper");
             frame2.add(new MyJPanelOpcje());
             frame2.pack();
+            frame2.setLocationRelativeTo(null);
+            frame2.setResizable(false);
+            frame2.setVisible(true);
+
         }
     }
 
@@ -57,7 +51,7 @@ public class MyJPanelStart extends JPanel {
         setPreferredSize(new Dimension(288, 512));
         setLayout(null);
         setBackground(Color.black);
-        Font czcionka = new Font("Jokerman", Font.BOLD, 70);
+        Font czcionka = new Font("Jokerman", Font.BOLD, 65);
 
         JLabel tytul = new JLabel();
         tytul.setFont(czcionka);
@@ -65,7 +59,6 @@ public class MyJPanelStart extends JPanel {
         tytul.setForeground(Color.white);
         tytul.setBounds(20, 50, 245, 100);
         add(tytul);
-
 
         JButton button = new JButton();
         button.setIcon(IconStart);
