@@ -19,17 +19,17 @@ Funkcjonalności:
 
 2.Opcje:
 
--poziomy trudności
+- poziomy trudności
 
 3.Autorzy
 
 -Praca zaliczeniowa kursu Connetis.
 
--Mentor java:
+- Mentor java:
 
  Piotr Wrona
 
--Autorzy:
+- Autorzy:
 
 Marcin Raźny
 
