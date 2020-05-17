@@ -5,10 +5,11 @@
 Nowa wersja gry Saper.
 
 Funkcjonalności:
-1. Okno wejściowe z opcjami:
+#Okno wejściowe z opcjami:
 
 ![1](https://user-images.githubusercontent.com/60845511/82160712-8c53b080-9897-11ea-8ef3-859f9927a807.png)
 
+#Okno gry:
 
 1.Menu:
 - nowa gra
@@ -20,13 +21,13 @@ Funkcjonalności:
 
 3.Autorzy
 
-Praca zaliczeniowa kursu Connetis.
+#Praca zaliczeniowa kursu Connetis.
 
-Mentor java:
+#Mentor java:
 
-Piotr Wrona
+##Piotr Wrona
 
-Autorzy:
+#Autorzy:
 
 Marcin Raźny
 
