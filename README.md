@@ -7,8 +7,7 @@ Nowa wersja gry Saper.
 Funkcjonalności:
 1. Okno wejściowe z opcjami:
 
-
-
+![1](https://user-images.githubusercontent.com/60845511/82160712-8c53b080-9897-11ea-8ef3-859f9927a807.png)
 
 
 1.Menu:
@@ -24,8 +23,11 @@ Funkcjonalności:
 Praca zaliczeniowa kursu Connetis.
 
 Mentor java:
+
 Piotr Wrona
 
 Autorzy:
+
 Marcin Raźny
+
 Radek Borowski
