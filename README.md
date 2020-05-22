@@ -30,7 +30,7 @@ Funkcjonalności:
 
 - poziomy trudności
 
-+ dźwięki: muzyka i wybuchy
+ + dźwięki: muzyka i wybuchy
 
 3.Autorzy
 
